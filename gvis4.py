@@ -3,7 +3,7 @@ from openai import OpenAI
 import base64
 import requests
 
-client = OpenAI(api_key="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",organization='org-FnRrJQPZgAjAOxW5dQ4IbPdk')
+client = OpenAI(api_key=st.secrets["APIKEY"],organization=st.secrets["ORG"])
 
 def response(image,text):
     response = client.chat.completions.create(
